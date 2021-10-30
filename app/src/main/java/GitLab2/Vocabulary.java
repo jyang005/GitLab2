@@ -1,4 +1,4 @@
-package src.main.java;
+package app.src.main.java.GitLab2;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package src.main.java;
+package app.src.main.java.GitLab2;
 
 import java.io.BufferedReader;
 import java.io.File;
