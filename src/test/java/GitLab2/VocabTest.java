@@ -1,4 +1,4 @@
-package app.src.test.java.GitLab2;
+package GitLab2;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import app.src.main.java.GitLab2.Vocabulary;
+import GitLab2.Vocabulary;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.assertThat; 
