@@ -28,4 +28,16 @@ test {
     ignoreFailures = true 
     useJUnitPlatform()
 }
+
+task reports (dependsOn: ['javadoc', 'test']){
+    description 'Checks that javadoc and test tasks are executed'
+}
+
+task deployResults(type: Copy) {            
+    from "$buildDir/master/build/docs"
+    into "$buildDir/gh-pages/docs" 
+    from "$buildDir/master/build/reports"
+    into "$buildDir/gh-pages/reports" 
+    dependsOn 'reports'
+}
 //
