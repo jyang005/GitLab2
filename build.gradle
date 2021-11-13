@@ -5,7 +5,7 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/7.2/userguide/building_java_projects.html
  */
-
+    
 plugins {
    id 'java'
 }
@@ -33,11 +33,14 @@ task reports (dependsOn: ['javadoc', 'test']){
     description 'Checks that javadoc and test tasks are executed'
 }
 
-task deployResults(type: Copy) {            
+
+task deployResults(type: Copy) {         
     from "$buildDir/master/build/docs"
     into "$buildDir/gh-pages/docs" 
     from "$buildDir/master/build/reports"
     into "$buildDir/gh-pages/reports" 
+    from "$buildDir/master/src/main.html"
+    into "$buildDir/gh-pages/reports"
     dependsOn 'reports'
     doLast {
         mkdir 'build/gh-pages'
@@ -56,6 +59,7 @@ task deployResults(type: Copy) {
             branch = 'gh-pages'
         }
     }
+    
     group = "Reporting"
     description  'Copies reports to the gh-pages branch in preparation for a future push to GitHub'
     doLast {
