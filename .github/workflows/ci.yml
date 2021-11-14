@@ -24,4 +24,4 @@ jobs:
       run: ./gradlew build 
     - name: website upload
       working-directory: .
-      run: ./gradlew deployReports
+      run: ./gradlew deployResults
