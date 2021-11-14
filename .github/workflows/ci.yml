@@ -21,4 +21,4 @@ jobs:
     - name: Build and test
       working-directory: ./GitLab2
       timeout-minutes: 20
-      run: GitLab2/gradlew build
+      run: Author/gradlew build
