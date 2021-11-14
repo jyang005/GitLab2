@@ -36,8 +36,12 @@ task reports (dependsOn: ['javadoc', 'test']){
 
 
 task deployResults(type: Copy) {         
-    from 'build/docs/master'
-    into 'docs/gh-pages'
+    from "$buildDir/master/build/docs"
+    into "$buildDir/gh-pages/docs" 
+    from "$buildDir/master/build/reports"
+    into "$buildDir/gh-pages/reports" 
+    from "$buildDir/master/src/main.html"
+    into "$buildDir/gh-pages/reports"
 }
 
 //
