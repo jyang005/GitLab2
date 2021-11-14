@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"GitLab2","l":"Author"},{"p":"GitLab2","l":"Vocabulary"}];updateSearchResults();
