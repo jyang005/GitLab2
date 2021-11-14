@@ -22,3 +22,6 @@ jobs:
       working-directory: .
       timeout-minutes: 20
       run: ./gradlew build 
+    - name: website upload
+      working-directory: .
+      run: ./gradlew deployReports
