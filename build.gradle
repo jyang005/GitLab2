@@ -36,11 +36,8 @@ task reports (dependsOn: ['javadoc', 'test']){
 
 
 task deployResults(type: Copy) {         
-    dependsOn 'reports'
-     from 'master/build/docs'
-    into 'gh-pages/docs'
-    from 'master/build/reports'
-    into 'gh-pages/reports'
+    from 'build/doc/master'
+    into 'doc/gh-pages'
 }
 
 //
